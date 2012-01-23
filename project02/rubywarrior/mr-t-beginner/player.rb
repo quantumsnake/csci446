@@ -3,6 +3,9 @@ class Player
   def play_turn(warrior)
     @health = warrior.health unless @health
     
+    if warrior.feel.wall?
+      warrior.pivot!
+    else
     if warrior.feel.enemy?
    	  warrior.attack!
    	else
@@ -19,12 +22,12 @@ class Player
    	      if @health < 16
    	    	warrior.rest!
    	      else
-   	        warrior.walk!
+   	        warrior.walk! 
    	      end
    	    end
    	  end
    	end
-   	      
+   	end      
     @health = warrior.health
   end
 end
