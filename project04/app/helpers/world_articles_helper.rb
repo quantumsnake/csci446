@@ -1,0 +1,2 @@
+module WorldArticlesHelper
+end

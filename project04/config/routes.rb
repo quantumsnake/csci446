@@ -1,4 +1,6 @@
 Articles::Application.routes.draw do
+  resources :world_articles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
