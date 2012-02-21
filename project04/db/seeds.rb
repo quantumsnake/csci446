@@ -9,7 +9,4 @@ WorldArticle.delete_all
 
 WorldArticle.create(title: 'Happy Thoughts',
                     author:'Butt Knuckle' ,
-                    body:  %{<p>
-                                This class is a great learning experience and I am 
-                                glad to be apart of it.
-                              </p>}) 
+                    body:  %{<p>This class is a great learning experience and I am glad to be apart of it.</p>}) 

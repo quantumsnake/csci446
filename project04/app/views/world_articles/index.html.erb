@@ -1,10 +1,11 @@
-<h1>Listing world_articles</h1>
-
+<h1>All the World's Articles</h1>
+<h3>...with a name .com that hipsters love!</h3>
 <table>
   <tr>
     <th>Title</th>
     <th>Author</th>
     <th>Body</th>
+    <th>Creation Date</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= world_article.title %></td>
     <td><%= world_article.author %></td>
     <td><%= world_article.body %></td>
+	<td><%= world_article.created_at %></td>
     <td><%= link_to 'Show', world_article %></td>
     <td><%= link_to 'Edit', edit_world_article_path(world_article) %></td>
     <td><%= link_to 'Destroy', world_article, confirm: 'Are you sure?', method: :delete %></td>
