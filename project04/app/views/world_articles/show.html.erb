@@ -1,20 +1,26 @@
+<h3>... what's "articl" in Spanish anyway?</h3>
 <p id="notice"><%= notice %></p>
+<table>
+<tr>
+<td><%= link_to image_tag("arrow_left.png", :title => "List all articles") + "List all articles", world_articles_path %></td>
+<td><%= link_to image_tag("page_edit.png", :title => 'Edit'), edit_world_article_path(@world_article) %></td>
+<td><%= link_to image_tag("bin_empty.png", :title => 'Delete'), @orld_article, confirm: 'Are you sure?', method: :delete %></td>
+<td><%= link_to image_tag("magnifier.png", :title => 'Email'), @world_article %></td><!-- Need to get a email picture and figure out the functionality -->
+</tr>
+</table>
 
 <p>
-  <b>Title:</b>
+  <b>
   <%= @world_article.title %>
+  </b>
 </p>
 
 <p>
-  <b>Author:</b>
-  <%= @world_article.author %>
+  by <%= @world_article.author %>, # edits since <%= @world_article.created_at.strftime("%b. %d %Y") %>
 </p>
 
 <p>
-  <b>Body:</b>
   <%= @world_article.body %>
 </p>
 
 
-<%= link_to 'Edit', edit_world_article_path(@world_article) %> |
-<%= link_to 'Back', world_articles_path %>

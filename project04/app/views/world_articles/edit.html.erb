@@ -1,6 +1,6 @@
-<h1>Editing <%= @world_article.title %></h1>
+<h3>... my cousin works for Bit.ly</h3>
 
+<h1>Editing "<%= @world_article.title %>"</h1>
+
+<%= link_to image_tag("arrow_left.png", title: 'Article List') + 'back', world_articles_path %>
 <%= render 'form' %>
-
-<%= link_to 'Show', @world_article %> |
-<%= link_to 'Back', world_articles_path %>
