@@ -24,17 +24,17 @@
 	}
 	
 	.list_title {
-		width: 60px;
+		
 		height: 10px;
 	}
 	
 	.list_author {
-		width: 60px;
+		
 		height: 10px;
 	}
 	
 	.list_body {
-		width: 60%;
+		width: 370px;
 		
 		dl {
 			margin: 0;
@@ -52,12 +52,20 @@
 	}
 	
 	.list_creation_date {
-		width: 60px;
+		width: 125px;
 	}
 	
 	.list_actions {
 		font-size: xsmall;
 		text-align: right;
 		padding-left: 1 em;
+	}
+	
+	.list_line_even {
+		background: #DEDEDE;
+	}
+	
+	.list_line_odd {
+		background: #EDEDED;
 	}
 }

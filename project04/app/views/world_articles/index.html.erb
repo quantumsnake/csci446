@@ -2,27 +2,39 @@
 <h3>...with a name .com that hipsters love!</h3>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Body</th>
-    <th>Creation Date</th>
+    <th class="list_title">Title</th>
+    <th class="list_author">Author</th>
+    <th class="list_body">Body</th>
+    <th class="list_creation_date">Creation Date</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+<% article_inc=0 %>
 <% @world_articles.each do |world_article| %>
-  <tr>
-    <td><%= world_article.title %></td>
-    <td><%= world_article.author %></td>
-    <td><%= world_article.body %></td>
-	<td><%= world_article.created_at %></td>
-    <td><%= link_to 'Show', world_article %></td>
-    <td><%= link_to 'Edit', edit_world_article_path(world_article) %></td>
-    <td><%= link_to 'Destroy', world_article, confirm: 'Are you sure?', method: :delete %></td>
+  <tr class="<%= cycle('list_line_even','list_line_odd') %>">
+    <td class="list_title"><%= world_article.title %></td>
+    <td class="list_author"><%= world_article.author %></td>
+    <td class="list_body">
+		<% if world_article.body.size > 50 %>
+			<%= world_article.body[0..50] + '...'%>
+		<% else %>
+			<%= world_article.body %>
+		<% end %>
+	</td>
+	<td class="list_creation_date"><%= world_article.created_at.strftime("%a, %b. %d %Y") %></td>
+    <td><%= link_to image_tag("magnifier.png", :title => 'View'), world_article %></td>
+    <td><%= link_to image_tag("page_edit.png", :title => 'Edit'), edit_world_article_path(world_article) %></td>
+    <td><%= link_to image_tag("bin_empty.png", :title => 'Delete'), world_article, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
+<% article_inc = article_inc + 1 %>
 <% end %>
 </table>
+<% if article_inc == 1 %>
+	<%= raw article_inc %> Article
+<% else %>
+	<%= raw article_inc %> Articles
+<% end %>
 
 <br />
 
