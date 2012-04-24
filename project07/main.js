@@ -15,17 +15,23 @@ $(function() {
 		// Compare number to theNumber!!!
 		if(thePeasentsNumber==theNumber) {
 			// Logic
+			iAmSoGoodAtLife();
 		}
 		if(thePeasentsNumber<theNumber) {
 			// Logic
+			alert("Way to be an under-achiever!!!")
 		}
 		if(thePeasentsNumber>theNumber) {
 			// Logic
+			alert("Easy there over-achiever!!!")
 		}
+		
 		// yay more logic
 		guessesLeft = guessesLeft-1;
+		
 		if(guessesLeft==0) {
 			// Logic
+			iAmAReallyBadGuesser();
 		}
 	});
 	updateScore(guessesLeft);
