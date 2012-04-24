@@ -7,7 +7,8 @@ var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "Near
 
 $(function() {
 	startNewGame();
-	// Logic goes here.
+	// Logic goes here. 
+	// There is also an error when it is time to start the game. it takes the last number as the first guess.
 	
 	$('#guessTheNumber').submit(function() {
 		// Sets guess number from the form.
@@ -83,11 +84,10 @@ function iAmSoGoodAtLife() {
 }
 
 function populateHighScores(scores) {
-	var scoreString;
+	//This does not work properly
   for (var i = 0; i < scores.length; ++i) {
-    scoreString.concat("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
+    $('div#highScores').append("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
   }
-	$('div#highScores').html(scoreString);
 }
 
 function updateScore(score) {
