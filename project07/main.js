@@ -35,6 +35,9 @@ $(function() {
 		}
 		
 		updateScore(guessesLeft);
+		
+		// I don't really no why this fixes it but it does and thank the gods for google
+		return false;
 	});
 	
 	populateHighScores(highScores);
@@ -57,6 +60,9 @@ function wannaPlayAgain() {
 	theAnswer = prompt("Do you dare try again, peasant?");
 	if(theAnswer = "yes") {
 		startNewGame();
+	}
+	if(theAnswer != "yes") {
+		alert("Have a glorious day, Kind sir");
 	}
 }
 
