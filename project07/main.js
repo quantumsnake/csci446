@@ -9,7 +9,7 @@ $(function() {
 	startNewGame();
 	// Logic goes here.
 	
-	$('#guessTheNumber').button(function() {
+	$('#guessTheNumber').submit(function() {
 		// Sets guess number from the form.
 		thePeasentsNumber = $("input[name='guess']").val();
 		// Compare number to theNumber!!!
