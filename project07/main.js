@@ -1,6 +1,7 @@
 var guessesLeft = 10;
 var theNumber = 0;
 var theAnswer = "";
+var bossesName = "";
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
 
 $(function() {
@@ -26,6 +27,21 @@ function wannaPlayAgain() {
 	if(theAnswer = "yes") {
 		startNewGame();
 	}
+}
+
+function iAmAReallyBadGuesser() {
+	alert("Lost");
+	wannaPlayAgain();
+}
+
+function iAmSoGoodAtLife() {
+	alert("Winner Winner Chicken Dinner");
+	bossesName = prompt("Thy name thou goest by?");
+	// Figure out how to append to high scores
+	// blah blah blah
+	populateHighScores(highScores);
+	wannaPlayAgain();
+	
 }
 
 function populateHighScores(scores) {
