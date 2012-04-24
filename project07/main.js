@@ -83,9 +83,11 @@ function iAmSoGoodAtLife() {
 }
 
 function populateHighScores(scores) {
+	var scoreString;
   for (var i = 0; i < scores.length; ++i) {
-    $('div#highScores').append("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
+    scoreString.concat("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
   }
+	$('div#highScores').html(scoreString);
 }
 
 function updateScore(score) {
