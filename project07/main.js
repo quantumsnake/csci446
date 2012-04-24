@@ -1,5 +1,6 @@
 var guessesLeft = 10;
 var theNumber = 0;
+var theAnswer = "";
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
 
 $(function() {
@@ -18,6 +19,13 @@ function startNewGame() {
 	
 	// This generates the number to guess
 	theNumber = Math.floor((Math.random()*100)+1);
+}
+
+function wannaPlayAgain() {
+	theAnswer = prompt("Do you dare try again, peasant?");
+	if(theAnswer = "yes") {
+		startNewGame();
+	}
 }
 
 function populateHighScores(scores) {
