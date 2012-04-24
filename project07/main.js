@@ -1,12 +1,35 @@
 var guessesLeft = 10;
 var theNumber = 0;
+var thePeasentsNumber = 0;
 var theAnswer = "";
 var bossesName = "";
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
 
 $(function() {
-  updateScore(guessesLeft);
-  populateHighScores(highScores);
+	startNewGame();
+	// Logic goes here.
+	
+	$('#guessTheNumber').button(function() {
+		// Sets guess number from the form.
+		thePeasentsNumber = $("input[name='guess']").val();
+		// Compare number to theNumber!!!
+		if(thePeasentsNumber==theNumber) {
+			// Logic
+		}
+		if(thePeasentsNumber<theNumber) {
+			// Logic
+		}
+		if(thePeasentsNumber>theNumber) {
+			// Logic
+		}
+		// yay more logic
+		guessesLeft = guessesLeft-1;
+		if(guessesLeft==0) {
+			// Logic
+		}
+	});
+	updateScore(guessesLeft);
+	populateHighScores(highScores);
 
 });
 
