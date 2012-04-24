@@ -68,6 +68,7 @@ function iAmSoGoodAtLife() {
 	bossesName = prompt("Thy name thou goest by?");
 	// Figure out how to append to high scores
 	// blah blah blah
+	highScores.push([10-guessesLeft, bossesName]);
 	populateHighScores(highScores);
 	wannaPlayAgain();
 	
