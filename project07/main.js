@@ -33,8 +33,10 @@ $(function() {
 			// Logic
 			iAmAReallyBadGuesser();
 		}
+		
+		updateScore(guessesLeft);
 	});
-	updateScore(guessesLeft);
+	
 	populateHighScores(highScores);
 
 });
@@ -81,5 +83,5 @@ function populateHighScores(scores) {
 }
 
 function updateScore(score) {
-  $('h2#score span#guessesLeft').append(score);
+  $('h2#score span#guessesLeft').html(score);
 }
